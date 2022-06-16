@@ -1,0 +1,12 @@
+name: stats
+dependencies:
+  - numpy
+  - pandas
+  - underthesea
+  - seaborn
+  - numpy
+  - pickle
+  - os
+  - streamlit
+  - PIL  
+  - pip
