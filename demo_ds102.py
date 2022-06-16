@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import underthesea
 import pickle
 import os
 import streamlit as st
@@ -140,7 +139,6 @@ with col1:
     return document
   def col_preprocess(data):
     for i in range(0,len(data)):
-      data["comment"].values[i] = word_tokenize(data["comment"].values[i])
       data["comment"].values[i] = text_preprocess(data["comment"].values[i])
       data["comment"].values[i] = remove_stopwords(data["comment"].values[i])
     return data
