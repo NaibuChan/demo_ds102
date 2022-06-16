@@ -22,7 +22,7 @@ data = [{"F1-macro":64.66, "accuracy":89.3,"precision":52.73,"recall":26.36}]
 perform_svm = pd.DataFrame(data, index = ["SVM + CountVectorizer + GridSearchCV + No Pre-process"])
 
 
-img = Image.open("E:\\Toxic_comments_dataset\\Run_model\\UIT.jpg")
+img = Image.open("\\UIT.jpg")
 with col2:
   st.text("Bảng phân bố nhãn dán dữ liệu theo tập dữ liệu")
   df = pd.DataFrame([("train",759,6241),("dev",232,1768),("test",110,890)],
@@ -78,27 +78,27 @@ with col1:
   st.header("Demo app")
   st.markdown("Nhóm 22 - DS102.M21 - Trần Hoàng Anh - Phạm Tiến Dương - Trương Phước Bảo Khanh")
   st.markdown("Giảng viên: cô Nguyễn Lưu Thùy Ngân - thầy Dương Ngọc Hảo - thầy Lưu Thanh Sơn")
-  path = r"E:\Toxic_comments_dataset\Run_model\LogReg_grid_TV_CV3.sav"
+  path = r"\LogReg_grid_TV_CV3.sav"
   assert os.path.isfile(path)
   with open(path, "rb") as f:
       model_logreg = pickle.load(f)
 
-  path = r"E:\Toxic_comments_dataset\Run_model\Naive_Bayes_grid_model.sav"
+  path = r"\Naive_Bayes_grid_model.sav"
   assert os.path.isfile(path)
   with open(path, "rb") as f:
       model_naivebayes = pickle.load(f)
 
-  path = r"E:\Toxic_comments_dataset\Run_model\SVM_grid_model.sav"
+  path = r"\SVM_grid_model.sav"
   assert os.path.isfile(path)
   with open(path, "rb") as f:
       model_svm = pickle.load(f)
 
-  path = r"E:\Toxic_comments_dataset\Run_model\encoder_TV.sav"
+  path = r"\encoder_TV.sav"
   assert os.path.isfile(path)
   with open(path, "rb") as f:
       loaded_encoder_TV = pickle.load(f)
 
-  path = r"E:\Toxic_comments_dataset\Run_model\encoder_CV.sav"
+  path = r"\encoder_CV.sav"
   assert os.path.isfile(path)
   with open(path, "rb") as f:
       loaded_encoder_CV = pickle.load(f)
@@ -118,7 +118,7 @@ with col1:
     model = model_svm
     loaded_encoder = loaded_encoder_CV
     st.write(perform_svm)  
-  stopword = pd.read_csv("E:\\Toxic_comments_dataset\\Run_model\\vietnamese.txt")
+  stopword = pd.read_csv("\\vietnamese.txt")
   def remove_stopwords(line):
       words = []
       for word in line.strip().split():
