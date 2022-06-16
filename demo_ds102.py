@@ -166,5 +166,5 @@ with col1:
     else: 
       st.success("Non-toxic")
   
-  img = Image.open("E:\\Toxic_comments_dataset\\Report\\Proposed_system.png")
+  img = Image.open("\\Proposed_system.png")
   st.image(img, width=900)
